@@ -118,7 +118,7 @@
           </div>
           <div class="contact_column is-right">
             <div class="form w-form">
-              <form id="contact-form" name="email-form" data-name="Email Form" method="get">
+              <form id="contact-form" name="email-form" data-name="Email Form" method="POST" action="/submit">
                 <div class="field_wrap">
                   <label for="name" class="field_label large">Name</label>
                   <input type="text" class="field name w-input" data-msg-minlength="Please enter your full name" maxlength="256"
@@ -145,31 +145,31 @@
                   <div class="radio_wrap">
                     <label class="radio_field w-radio">
                       <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio_button w-radio-input"></div>
-                      <input type="radio" data-name="projectBudget" id="Room Cleaning" name="projectBudget" value="Room Cleaning"
+                      <input type="radio" data-name="Complaint_Type" id="Room Cleaning" name="Complaint_Type" value="Room Cleaning"
                              style="opacity:0;position:absolute;z-index:-1" onclick="toggleComplaintField()" />
                       <span class="radio_label w-form-label" for="Room Cleaning">Room Cleaning</span>
                     </label>
                     <label class="radio_field w-radio">
                       <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio_button w-radio-input"></div>
-                      <input type="radio" data-name="projectBudget" id="Electrical" name="projectBudget" value="Electrical"
+                      <input type="radio" data-name="Complaint_Type" id="Electrical" name="Complaint_Type" value="Electrical"
                              style="opacity:0;position:absolute;z-index:-1" onclick="toggleComplaintField()" />
                       <span class="radio_label w-form-label" for="Electrical">Electrical</span>
                     </label>
                     <label class="radio_field w-radio">
                       <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio_button w-radio-input"></div>
-                      <input type="radio" data-name="projectBudget" id="Washroom" name="projectBudget" value="Washroom"
+                      <input type="radio" data-name="Complaint_Type" id="Washroom" name="Complaint_Type" value="Washroom"
                              style="opacity:0;position:absolute;z-index:-1" onclick="toggleComplaintField()" />
                       <span class="radio_label w-form-label" for="Washroom">Washroom</span>
                     </label>
                     <label class="radio_field w-radio">
                       <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio_button w-radio-input"></div>
-                      <input type="radio" data-name="projectBudget" id="Mess" name="projectBudget" value="Mess"
+                      <input type="radio" data-name="Complaint_Type" id="Mess" name="Complaint_Type" value="Mess"
                              style="opacity:0;position:absolute;z-index:-1" onclick="toggleComplaintField()" />
                       <span class="radio_label w-form-label" for="Mess">Mess</span>
                     </label>
                     <label class="radio_field w-radio">
                       <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio_button w-radio-input"></div>
-                      <input type="radio" name="projectBudget" id="Others" value="&gt; Others" data-name="projectBudget"
+                      <input type="radio" name="Complaint_Type" id="Others" value="&gt; Others" data-name="Complaint_Type"
                              style="opacity:0;position:absolute;z-index:-1" onclick="toggleComplaintField()" />
                       <span class="radio_label w-form-label" for="Others">Others</span>
                     </label>
@@ -240,6 +240,7 @@
       }
     </style>
   </noscript>
+  
 
   <script>
     function setFontSize() {
@@ -276,7 +277,7 @@
     // Methods at https://jqueryvalidation.org/category/methods/
     $("#contact-form").validate({
       rules: {
-        projectBudget: {
+        Complaint_Type: {
           required: true
         },
         Phone: {
