@@ -118,7 +118,7 @@
           </div>
           <div class="contact_column is-right">
             <div class="form w-form">
-              <form id="contact-form" name="email-form" data-name="Email Form" method="POST" action="/submit">
+              <form id="contact-form" name="email-form" data-name="Email Form" method="POST">
                 <div class="field_wrap">
                   <label for="name" class="field_label large">Name</label>
                   <input type="text" class="field name w-input" data-msg-minlength="Please enter your full name" maxlength="256"
@@ -193,6 +193,30 @@
                   display: none;
                 }
               </style>
+               <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+               <script>
+                   $(document).ready(function() {
+                       $('#contact-form').on('submit', function(event) {
+                           event.preventDefault();
+                           
+                           const formData = $(this).serialize();
+           
+                           $.ajax({
+                               type: 'POST',
+                               url: '/submit',
+                               data: formData,
+                               success: function(response) {
+                                   $('.success').addClass('show');
+                                   $('.error-message').removeClass('show');
+                               },
+                               error: function() {
+                                   $('.error-message').addClass('show');
+                                   $('.success').removeClass('show');
+                               }
+                           });
+                       });
+                   });
+               </script>
               
               <script>
                 function toggleComplaintField() {
