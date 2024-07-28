@@ -9,7 +9,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public')); // Ensure you have a 'public' folder for static files
 app.use(bodyParser.json());
 
-app.post('/submit', async (req, res) => {
+app.post('/api/submit', async (req, res) => {
+    
     const { name, registration_number, block_room_number, email, Complaint_Type, message } = req.body;
 
     // Log the received form data
@@ -43,7 +44,7 @@ app.post('/submit', async (req, res) => {
         res.status(500).send('Unexpected error submitting your complaint');
     }
 });
-app.post('/fetch-complaints', async (req, res) => {
+app.post('/api/fetch-complaints', async (req, res) => {
   const { registration_number, email } = req.body;
 
   try {
