@@ -215,11 +215,14 @@
                                     <div class="complaint-item">
     <h3>Complaint ${index + 1}:</h3>
     <ul class="complaint-list">
-        <li><span class="complaint-label">Complaint Type:</span> ${complaint.complaint_type}</li>
-        ${complaint.complaint_type !== 'Room Cleaning' ? `<li><span class="complaint-label">Message:</span> ${complaint.message}</li>` : ''}
-        <li><span class="complaint-label">Complaint Date:</span> ${new Date(complaint.created_at).toLocaleString()}</li>
-        <li><span class="complaint-label">Status:</span> ${status}</li>
-    </ul>
+    <li>
+        <span class="complaint-label">Complaint Type:</span> 
+        <span class="complaint-text">${complaint.complaint_type}</span>
+    </li>
+    ${complaint.complaint_type !== 'Room Cleaning' ? `<li><span class="complaint-label">Message:</span> <span class="complaint-text">${complaint.message}</span></li>` : ''}
+    <li><span class="complaint-label">Complaint Date:</span> <span class="complaint-text">${new Date(complaint.created_at).toLocaleString()}</span></li>
+    <li><span class="complaint-label">Status:</span> <span class="complaint-text">${status}</span></li>
+</ul>
 </div>
 
                                 `;

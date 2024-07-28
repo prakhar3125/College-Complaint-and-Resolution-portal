@@ -82,42 +82,78 @@ body {
 #result tbody tr:last-of-type {
   border-bottom: 2px solid #4CAF50; /* Green border for the last row */
 }
-
-.complaint-container {
-  margin-top: 20px;
+.complaint-list span {
+  font-size: 20px;
 }
 
-.complaint-container h2 {
-  color: #ffffff;
+@media (max-width: 600px) {
+  .complaint-list span {
+    font-size: 18px;
+  }
+}
+.complaint-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.complaint-header {
+  text-align: center;
   margin-bottom: 20px;
-  font-size: 1.6em; /* Increased from 1.5em to 1.6em */
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-  letter-spacing: 1px; /* Increase letter spacing for emphasis */
+}
+
+.complaint-header h2 {
+  color: #ffffff;
+  font-size: 2.2em;
   font-weight: bold;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+.complaint-list {
+  width: 100%;
+  max-width: 800px;
 }
 
 .complaint-item {
+  border-radius: 8px;
+  padding: 20px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #ddd; /* Light grey border */
-  padding-bottom: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  transition: border 0.2s ease-in-out;
+  word-wrap: break-word; /* Ensure long words break and wrap */
+  overflow-wrap: break-word; /* Ensure long words break and wrap */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-.complaint-item h3 {
-  margin: 0 0 5px;
-  color: #ffffff; /* Green color for subheadings */
-  font-size: 1.5em; /* Increased from 1.4em to 1.5em */
+.complaint-item:hover {
+  border: 1px solid #ddd;
 }
 
-.complaint-item p {
-  margin: 5px 0;
-  font-size: 1.3em; /* Increased from 1.2em to 1.3em */
+.complaint-detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 1.4em;
 }
 
 .complaint-label {
   font-weight: bold;
-  color: #ffffff; /* Green color for labels */
+  color: #ffffff;
+  margin-right: 10px;
+  font-size: 1.2em;
 }
 
+.complaint-value {
+  flex-grow: 1;
+}
+
+.complaint-text {
+  color: #ffffff; /* Add this to ensure the text color matches the rest */
+}
 
 
 .logo_link {
