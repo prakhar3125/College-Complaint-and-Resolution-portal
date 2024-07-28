@@ -2571,7 +2571,7 @@ blockquote {
 .headline_wrap {
   width: 36em;
   max-width: 100%;
-  padding-top: 5.5em;
+  padding-top: 4.5em;
   padding-bottom: 2.5em;
   color: #ffffff; /* Explicit white color */
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Stronger shadow for better contrast */
