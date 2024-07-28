@@ -2832,11 +2832,17 @@ blockquote {
   }
 
   .contact_column.is-right {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: auto;
     width: 100%;
-    min-height: auto;
-    padding-top: 5em;
-    padding-bottom: 5em;
-    background-color: #000;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4); /* Black background with 50% opacity */
+  backdrop-filter: blur(15px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    border-left: none; /* Remove left border */
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Border on the top only */
   }
 
   .headline_wrap {
