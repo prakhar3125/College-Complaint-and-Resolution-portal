@@ -1,4 +1,102 @@
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out;
+  -webkit-text-fill-color: white;
+}
+
+
+/* Base scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px; /* Adjust the width as needed */
+  background-color: transparent; /* Match the panel background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3); /* Match the panel border color */
+  border-radius: 5px;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 20px;
+}
+#result-table {
+  margin-top: 20px;
+}
+
+#result {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  min-width: 400px;
+}
+
+#result th, #result td {
+  padding: 12px 15px;
+  border: 1px solid #ddd; /* Light grey border */
+  text-align: left;
+}
+
+#result th {
+  background-color: #4CAF50; /* Green background for headings */
+  color: #fff; /* White text for headings */
+}
+
+#result tbody tr {
+  border-bottom: 1px solid #ddd; /* Light grey border */
+}
+
+#result tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9; /* Light grey background for even rows */
+}
+
+#result tbody tr:last-of-type {
+  border-bottom: 2px solid #4CAF50; /* Green border for the last row */
+}
+
+.complaint-container {
+  margin-top: 20px;
+}
+
+.complaint-container h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.6em; /* Increased from 1.5em to 1.6em */
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  letter-spacing: 1px; /* Increase letter spacing for emphasis */
+  font-weight: bold;
+}
+
+.complaint-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd; /* Light grey border */
+  padding-bottom: 10px;
+}
+
+.complaint-item h3 {
+  margin: 0 0 5px;
+  color: #ffffff; /* Green color for subheadings */
+  font-size: 1.5em; /* Increased from 1.4em to 1.5em */
+}
+
+.complaint-item p {
+  margin: 5px 0;
+  font-size: 1.3em; /* Increased from 1.2em to 1.3em */
+}
+
+.complaint-label {
+  font-weight: bold;
+  color: #ffffff; /* Green color for labels */
+}
+
+
 
 .logo_link {
   position: absolute;
@@ -9,14 +107,18 @@
   align-items: center;
 }
 .logo_image {
-   width: 100px; /* Adjust the size as needed */
-    height: auto;
-    filter: invert(100%) brightness(200%); /* Makes the image white */
-}
-.logo_image {
   width: 100px; /* Adjust the size as needed */
   height: auto;
+  filter: invert(100%) brightness(200%); /* Makes the image white */
+  
+  transition: transform 0.2s, filter 0.2s; /* Smooth transition for hover effects */
 }
+
+.logo_image:hover {
+  transform: scale(1.05); /* Slightly enlarge the logo on hover */
+  filter: invert(100%) brightness(250%); /* Slightly increase brightness on hover */
+}
+
  
 /* Generated on: Sat Feb 05 2022 12:34:42 GMT+0000 (Coordinated Universal Time) */
 /* ==========================================================================
@@ -2389,6 +2491,7 @@ blockquote {
   overflow: hidden;
   width: 50%;
   padding: 4.3em;
+  
 }
 
 .contact_column.is-left {
@@ -2436,6 +2539,7 @@ blockquote {
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  
 }
 
 .logo_link {
@@ -2445,7 +2549,7 @@ blockquote {
 .headline_wrap {
   width: 36em;
   max-width: 100%;
-  padding-top: 6.5em;
+  padding-top: 5.5em;
   padding-bottom: 2.5em;
   color: #ffffff; /* Explicit white color */
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Stronger shadow for better contrast */
@@ -2576,17 +2680,28 @@ blockquote {
 }
 
 .side-panel {
+  
   position: fixed;
   left: auto;
-  top: 0%;
-  right: 0%;
+  top: 0;
+  right: 0;
   bottom: auto;
   z-index: 2;
   width: 50%;
   height: 100vh;
-  padding: 0em;
-  background-color: #000;
+  padding: 0; /* Remove all padding */
+  background: rgba(0, 0, 0, 0.4); /* Black background with 50% opacity */
+  backdrop-filter: blur(15px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+  
+  border-left: 1px solid rgba(255, 255, 255, 0.3); /* Border on the left side only */
+
 }
+
+
+
+
+
 
 .error2 {
   display: block;
@@ -2649,7 +2764,7 @@ blockquote {
   padding: 1.9em 2.1em;
   border-radius: 0.5em;
   background-color: hsla(0, 0%, 100%, 0.09);
-  color: #e5a7ff;
+  color: #ffffff;
 }
 
 .error-message_text {
