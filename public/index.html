@@ -200,6 +200,16 @@
                   display: none;
                 }
               </style>
+              <script>
+                document.addEventListener('DOMContentLoaded', (event) => {
+                    const registrationNumberInput = document.getElementById('registration_number');
+                    
+                    registrationNumberInput.addEventListener('input', function() {
+                        this.value = this.value.toUpperCase();
+                    });
+                });
+                </script>
+                
                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                <script>
                    $(document).ready(function() {

@@ -155,7 +155,16 @@
                 </table>
               </div>
               <div id="complaint-output" class="complaint-container" style="display: none;"></div>
-
+              <script>
+                document.addEventListener('DOMContentLoaded', (event) => {
+                    const registrationNumberInput = document.getElementById('registration_number');
+                    
+                    registrationNumberInput.addEventListener('input', function() {
+                        this.value = this.value.toUpperCase();
+                    });
+                });
+                </script>
+                
               <script>
                 document.getElementById('contact-form').addEventListener('submit', function(event) {
                     event.preventDefault();
