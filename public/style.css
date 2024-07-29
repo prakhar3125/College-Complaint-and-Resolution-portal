@@ -165,7 +165,7 @@ body {
   align-items: center;
 }
 .logo_image {
-  width: 100px; /* Adjust the size as needed */
+  width: 70px; /* Adjust the size as needed */
   height: auto;
   filter: invert(100%) brightness(200%); /* Makes the image white */
   
@@ -2607,7 +2607,7 @@ blockquote {
 .headline_wrap {
   width: 36em;
   max-width: 100%;
-  padding-top: 4.5em;
+  padding-top: 2.5em;
   padding-bottom: 2.5em;
   color: #ffffff; /* Explicit white color */
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Stronger shadow for better contrast */
