@@ -1,4 +1,4 @@
-# College-Complaint-and-Resolution-portal
+# College-Complaint-and-Resolution-porta l
 ![1](https://github.com/user-attachments/assets/56fc9193-101e-4c45-9dae-0d5574c75490)
 ![2](https://github.com/user-attachments/assets/dc75e422-4dcf-4389-be6b-ac9fe2df9c8a)
 ![3](https://github.com/user-attachments/assets/8d3a91a7-e60c-43f0-9754-d42fe59f344f)
