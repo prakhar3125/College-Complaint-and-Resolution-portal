@@ -1,5 +1,5 @@
 # College Complaint and Resolution Portal
- Site Demo: https://college-complaint-and-resolution-portal.vercel.app/index.html
+Site Demo: https://college-complaint-and-resolution-portal.vercel.app/index.html
 
 – Developed a complaint submission and viewing portal using Node.js and Express.js, integrating with a Supabase SQL database for data storage.
 
